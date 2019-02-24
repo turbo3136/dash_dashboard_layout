@@ -5,13 +5,19 @@
 
 /* take note of some variables */
 :root {
-    --sidebar-width: 224px;
     --header-height: 56px;
+    --sub-header-height: 40px;
+    --sidebar-width: 224px;
+    --sidebar-color: #000;
 }
 
 body {
     padding: 0;
     margin: 0;
+}
+
+.dashboard-wrapper {
+    /* nothing to see here */
 }
 
 /* our header will be fixed at the top of the page and never move */
@@ -30,4 +36,63 @@ body {
     height: var(--header-height);
     border-bottom: 1px solid #a6a6a6;
     width: 100%;
+    padding: 0 16px;
+}
+
+.sub-header-row {
+    display: flex;
+    align-items: center;
+    height: var(--sub-header-height);
+    border-bottom: 1px solid #a6a6a6;
+    width: 100%;
+    padding: 0 16px;
+}
+
+.header-links {
+    display: flex;
+    margin: 0 40px 0 40px;
+}
+
+.sub-header-links {
+    display: flex;
+    margin: 0 40px 0 40px;
+}
+
+.header-link {
+    font-size: 11pt;
+    font-weight: bold;
+    padding: 0 20px 0 20px;
+    line-height: var(--header-height);  /* this makes the text centered */
+}
+
+.sub-header-link {
+    font-size: 11pt;
+    font-weight: bold;
+    padding: 0 20px 0 20px;
+    line-height: var(--header-height);  /* this makes the text centered */
+}
+
+.header-link:hover, .sub-header-link:hover {
+    color: #000;
+}
+
+a:link, a:visited {
+    color: #666;
+    text-decoration: none;
+}
+
+/* now for the sidebar and content areas */
+.sidebar-and-content {
+    display: grid;
+    row-gap: 0;
+    column-gap: 10px;
+    grid-template-areas: "sidebar content";
+    grid-template-columns: var(--sidebar-width) 1fr;
+    min-height: 100vh;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    padding: 0;
+    background-color: var(--sidebar-color);
 }
