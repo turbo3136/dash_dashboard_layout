@@ -117,3 +117,5 @@ dmypy.json
 
 # turbo's ignores
 .idea/
+data/
+config.py
