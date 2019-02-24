@@ -1,0 +1,33 @@
+/* get rid of the undo button that comes default with Dash */
+._dash-undo-redo {
+    display: none;
+}
+
+/* take note of some variables */
+:root {
+    --sidebar-width: 224px;
+    --header-height: 56px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* our header will be fixed at the top of the page and never move */
+/* we'll also give it a fancy shadow so it's visually separate */
+.header {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 0 10px 1px #666;
+}
+
+.header-row {
+    display: flex;
+    align-items: center;
+    height: var(--header-height);
+    border-bottom: 1px solid #a6a6a6;
+    width: 100%;
+}
