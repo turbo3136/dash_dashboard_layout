@@ -7,8 +7,10 @@
 :root {
     --header-height: 56px;
     --sub-header-height: 40px;
+    --total-header-height: 98px;
     --sidebar-width: 224px;
     --sidebar-color: #000;
+    --sidebar-text-color: #fff;
 }
 
 body {
@@ -17,7 +19,7 @@ body {
 }
 
 .dashboard-wrapper {
-    /* nothing to see here */
+    min-height: 100vh;
 }
 
 /* our header will be fixed at the top of the page and never move */
@@ -28,9 +30,11 @@ body {
     top: 0;
     width: 100%;
     box-shadow: 0 0 10px 1px #666;
+    background-color: #fff;
 }
 
 .header-row {
+    overflow: hidden;
     display: flex;
     align-items: center;
     height: var(--header-height);
@@ -83,6 +87,7 @@ a:link, a:visited {
 
 /* now for the sidebar and content areas */
 .sidebar-and-content {
+    padding-top: var(--total-header-height);
     display: grid;
     row-gap: 0;
     column-gap: 10px;
@@ -94,5 +99,10 @@ a:link, a:visited {
 .sidebar {
     grid-area: sidebar;
     padding: 0;
+    color: var(--sidebar-text-color);
     background-color: var(--sidebar-color);
+}
+
+.content {
+    grid-area: content;
 }

@@ -83,4 +83,4 @@ def create_header(
     if include_sub_header:  # if we have any sub header objects, add them to the second row
         header_children.append(html.Div(className=sub_header_row_class_name, children=sub_header_objects_list))
 
-    return html.Div(className='header-wrapper', children=html.Div(className=header_class_name, children=header_children))
+    return html.Div(className=header_class_name, children=header_children)
