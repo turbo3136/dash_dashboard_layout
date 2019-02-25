@@ -31,6 +31,7 @@ body {
     width: 100%;
     box-shadow: 0 0 10px 1px #666;
     background-color: #fff;
+    z-index: 10000;
 }
 
 .header-row {
@@ -87,7 +88,7 @@ a:link, a:visited {
 
 /* now for the sidebar and content areas */
 .sidebar-and-content {
-    padding-top: var(--total-header-height);
+    margin-top: var(--total-header-height);
     display: grid;
     row-gap: 0;
     column-gap: 10px;
@@ -98,11 +99,12 @@ a:link, a:visited {
 
 .sidebar {
     grid-area: sidebar;
-    padding: 0;
+    padding: 10px 0 0 0;
     color: var(--sidebar-text-color);
     background-color: var(--sidebar-color);
 }
 
 .content {
     grid-area: content;
+    padding: 10px 0 0 0 ;
 }

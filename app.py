@@ -40,6 +40,7 @@ sub_header_row_class_name = 'sub-header-row'
 sub_header_links_class_name = 'sub-header-links'
 sidebar_and_content_class_name = 'sidebar-and-content'
 sidebar_filters = [filter_object]
+sidebar_filter_headers = ['Country']
 content_objects = [content_object]
 
 app.layout = layout.create_layout(
@@ -56,7 +57,7 @@ app.layout = layout.create_layout(
     sidebar_and_content_class_name=sidebar_and_content_class_name,
     sidebar_class_name='sidebar',
     sidebar_filters=sidebar_filters,
-    sidebar_filter_headers=None,
+    sidebar_filter_headers=sidebar_filter_headers,
     sidebar_filter_headers_class_name=None,
     sidebar_filter_wrapper_class_name=None,
     content_class_name='content',
