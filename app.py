@@ -12,7 +12,7 @@ app = dash.Dash(__name__)
 df = pd.read_csv(GAPMINDER_PATH)
 # geo, time, children_per_woman_total_fertility, working_hours_per_week
 df = df[['geo', 'children_per_woman_total_fertility', 'working_hours_per_week']]
-df = df[(df['working_hours_per_week'].notnull()) & (df['children_per_woman_total_fertility'].notnull())]
+df = df[(df['working_hours_per_week'].notnull()) & (df['children_per_woman_total_fertility'].notnull())]  # clean up
 
 filter_options = [{'label': i, 'value': i} for i in df['geo'].unique()]
 filter_options.insert(0, {'label': 'All', 'value': None})  # we add a filter with None value
